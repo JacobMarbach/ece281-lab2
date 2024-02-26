@@ -94,7 +94,7 @@ begin
 	   );
 	-- CONCURRENT STATEMENTS ----------------------------
 	-- wire up active-low 7SD anode (active low) to button (active-high)
-	w_7SD_EN_n  <= btnC;
+	w_7SD_EN_n  <= not btnC;
 	-- display 7SD 0 only when button pushed
 	an(0)    <= w_7SD_EN_n;
 	-- other 7SD are kept off
